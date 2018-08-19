@@ -1012,9 +1012,13 @@ namespace MaterialSkin.Controls
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
-
-            _baseTextBox.Location = new Point(0, 0);
-            _baseTextBox.Width = Width;
+                        
+            //_baseTextBox.Location = new Point(0, 0);
+            
+            if (_baseTextBox.Width != 163)
+            {
+                _baseTextBox.Width = Width;
+            }
 
             Height = _baseTextBox.Height + 5;
         }
